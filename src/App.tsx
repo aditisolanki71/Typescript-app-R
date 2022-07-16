@@ -24,7 +24,6 @@ const [todos,setTodos] = useState<Todo[]>(
 }
   return (
     <div className="App">
-      Typescript React
       <NewTodo onAddTodo={submitTodo} />
       <TodoList items={todos} onDeleteTodo={deleteTodo}/>
     </div>

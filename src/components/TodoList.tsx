@@ -1,11 +1,13 @@
 import React from "react";
+import "./TodoList.css";
 interface TodoListProps {
    items: {id: string,text: string}[];
    onDeleteTodo : (id:string) => void;
 }
 const TodoList : React.FC<TodoListProps> = (props) => {
    return (
-      <ul>Goals List
+      <ul>
+      <h3>Goals List:</h3>
       {props.items.map((todo) => (
          <li key={todo.id}>
             <span>{todo.text}</span>
