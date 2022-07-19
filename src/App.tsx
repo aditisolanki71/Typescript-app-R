@@ -22,10 +22,19 @@ const [todos,setTodos] = useState<Todo[]>(
    return prevTodos.filter(todo => todo.id !== id);
  });
 }
+
+ const editTodo = (todo:Todo,index: number) => {
+  const newTodo = [...todos]
+  newTodo[index] = todo
+  setTodos(newTodo);
+}
   return (
     <div className="App">
-      <NewTodo onAddTodo={submitTodo} />
-      <TodoList items={todos} onDeleteTodo={deleteTodo}/>
+     <NewTodo onAddTodo={submitTodo} />
+      <TodoList items={todos}
+        onDeleteTodo={deleteTodo} 
+        onEditTodo={editTodo} 
+      />
     </div>
   );
 };

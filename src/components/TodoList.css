@@ -14,4 +14,11 @@ ul {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   
+ }
+ .todoListInput {
+   width:50%;
+ }
+ .todoListDeleteAction {
+   margin:5px;
  }
